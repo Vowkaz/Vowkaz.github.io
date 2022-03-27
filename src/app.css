@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #222;
+    color: #f0ffff;
+    margin: 0;
+    font-family: 'roboto', monospace;
+} 
+body::-webkit-scrollbar {
+    width: 5px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: none;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid darkgray;  /* creates padding around scroll thumb */
+}
+.lists {
+    margin-top: -120px;
+}
+footer {
+    margin: 50px 0;
+    text-align: center;
+}
