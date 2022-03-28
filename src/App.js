@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './app.css';
-import tmdb from './tmdb';
+import tmdb from './api/tmdb';
 import movieRow from './components/movieRow';
 import featureMovie from './components/featureMovie';
 // import header from './components/header';
@@ -38,12 +38,11 @@ export default () => {
             return () => {
                 window.removeEventListener('scroll', scrollListener);    
             }
-        }, []); */
+        }, []);
+        //pro html ->  <header  black={blackHeader} /> */
 
     return (
         <div className="page">
-
-            <header /* black={blackHeader}*/ />
 
             {featureData && 
             <featureMovie item={featureData} />
