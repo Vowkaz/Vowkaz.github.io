@@ -10,6 +10,10 @@ export default ({item}) => {
     for (let i in item.genres) {
         genres.push(item.genres[i].name);
     }
+    let description = item.overview;
+    // if (description.length > 200) {
+    //    description = description.substring(0, 200) + '...';
+    // }
 
     return (
         <section className="feature" style={{
@@ -23,9 +27,10 @@ export default ({item}) => {
                     <div className="feature--info">
                         <div className="feature--points">{item.vote_average} pontos</div>
                         <div className="feature--year">{firstDate.getFullYear()}</div>
-                        <div className="feature--seasons">{item.number_of_seasons} temporada{item.number_of_seasons < 2 ? 's' : ''}</div>
+                        <div
+                            className="feature--seasons">{item.number_of_seasons} temporada{item.number_of_seasons < 2 ? 's' : ''}</div>
                     </div>
-                    <div className="feature--description">{item.overview}</div>
+                    <div className="feature--description">{description}</div>
                     <div className="feature--buttons">
                         <a href={`/watch/${item.id}`} className="buttons--watch"> ▶ Assistir </a>
                         <a href={`/list/add/${item.id}`} className="buttons--list"> x Minha Lista</a>

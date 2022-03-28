@@ -1,5 +1,5 @@
 .feature {
-    height: 100%;
+    height: 100vh;
     width: auto;
 }
 .feature--vertical {
@@ -44,7 +44,7 @@
     max-height: 40%;
     overflow-y: hidden;
 }
-.feature-buttons{
+.feature--buttons{
     margin-top: 15px;
 }
 .buttons--watch,
@@ -76,4 +76,27 @@
     margin-top: 15px;
     font-size: 18px;
     color: #ddd;
+}
+
+@media (max-width: 768px){
+    .feature{
+        height: 90vh;
+    }
+    .feature--name{
+        font-size: 40px;
+    }
+    .feature--info{
+        font-size: 16px;
+    }
+    .feature--description{
+        font-size: 14px;
+        max-width: 100%;
+        margin-right: 30px;
+    }
+    .feature--buttons {
+        font-size: 16px;
+    }
+    .feature--genres{
+        font-size: 14px;
+    }
 }

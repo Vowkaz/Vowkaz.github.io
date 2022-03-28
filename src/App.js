@@ -16,7 +16,6 @@ export default () => {
         const loadAll = async () => {
             let list = await tmdb.getHomeList();
             setMovieList(list);
-            console.log(list);
 
             let originals = list.filter(i => i.slug === 'originals');
             let randomChosen = Math.floor(Math.random() * (originals[0].items.results.length - 1));
@@ -46,7 +45,7 @@ export default () => {
     return (
         <div className="page">
 
-            <Header  black={blackHeader} />
+            <Header black={blackHeader}/>
 
             {featureData &&
                 <FeatureMovie item={featureData}/>
@@ -59,6 +58,12 @@ export default () => {
                     </MovieRow>
                 ))}
             </section>
+            {movieList.length <= 0 &&
+                <div className="loading">
+                    <img
+                        src="https://media2.giphy.com/media/tA4R6biK5nlBVXeR7w/giphy.gif?cid=790b76110d5136daf49e3a709ca19ac978f8a8ba66f20223&rid=giphy.gif&ct=g"
+                        alt="loading"/>
+                </div>}
 
         </div>
     )
