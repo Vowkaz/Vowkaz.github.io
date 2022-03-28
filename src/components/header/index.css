@@ -10,7 +10,10 @@ header {
     align-items: center;
     padding: 0 30px;
     background: transparent;
-    transition: all ease-in cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all ease-in 0.2s;
+}
+header.black {
+    background: linear-gradient(to bottom, #222 90%, transparent 10%);
 }
 .header--logo {
     height: 25px;

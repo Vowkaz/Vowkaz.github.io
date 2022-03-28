@@ -9,20 +9,45 @@
     padding-left: 30px;
 }
 .movieRow--list {
-    width: 100%;
+    width: max-content;
 }
 .movieRow--item {
     display: inline-block;
     width: 150px;
-    padding: 0 .2vw;
     border-radius: 2px;
     cursor: pointer;
+    margin: 0px -4px;
 }
 .movieRow--item img {
     width: 100%;
     transform: scale(0.9);
-    transition: all ease cubic-bezier(0.215, 0.610, 0.355, 1);
+    transition: all ease 0.2s;
 }
 .movieRow--item img:hover {
     transform: scale(1);
+}
+.movieRow--left,
+.movieRow--right {
+    position: absolute;
+    width: 40px;
+    height: 225px;
+    background-color: rgba(4,4,4, 0.4);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+}
+.movieRow--left:hover,
+.movieRow--right:hover{
+    opacity: 1;
+    transition: all ease 0.5s;
+}
+.movieRow--left {
+    left: 0;
+}
+.movieRow--right {
+    right: 0;
 }
