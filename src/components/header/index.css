@@ -11,9 +11,10 @@ header {
     padding: 0 30px;
     background: transparent;
     transition: all ease-in 0.2s;
+    background: linear-gradient(to bottom , #111 1%, transparent 90% );
 }
 header.black {
-    background: linear-gradient(to bottom, #222 90%, transparent 10%);
+    background: #111;
 }
 .header--logo {
     height: 25px;
